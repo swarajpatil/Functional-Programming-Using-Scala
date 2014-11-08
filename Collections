@@ -1,0 +1,35 @@
+
+  val nums = 1 to 50 toList
+  
+  // map : Purpose of this function to perform some operation on each element of collection
+  nums map (x => x + 1)
+  
+  nums map (_ + 1)
+
+  def addone(n:Int) = n + 1
+  
+  nums map addone
+  
+  def lessThanTen(n:Int) = n < 10
+  
+  // filter : Purpose of this function to pass each element as argument to anonymous function 
+  // and return list of element for which it return true
+  
+  nums filter (_ % 2 == 0)
+
+  nums map addone filter lessThanTen
+  
+  nums reduce (_ + _)
+  
+  def add(a: Int, b: Int) = a + b
+  nums reduce add
+  
+  // forall : Each element of collection checked for passed function, if result for all element is true then it gives true otherwise false 
+  nums.forall(_ % != 0)
+  nums.forall(isOdd)
+  
+  // exists : It simply check wheather element with that condition exists or not
+  nums.exists(_ > 20)
+  nums.exists(_ % 2 == 0)
+
+
