@@ -31,5 +31,8 @@
   // exists : It simply check wheather element with that condition exists or not
   nums.exists(_ > 20)
   nums.exists(_ % 2 == 0)
+  
+  // takeWhile : It returns list upto that matching condition
+  nums.takeWhile(_ < 20)
 
 
